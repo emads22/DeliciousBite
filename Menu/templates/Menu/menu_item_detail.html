@@ -1,31 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeliciousBite</title>
-</head>
-<body>
+{% extends 'Menu/base.html' %}
+
+{% block content %}
     
-    <h1>Menu Item Details: </h1>
+    <h1 class="py-5">Menu Item Details: </h1>
     <!-- access the attributes of the MenuItem instance using the lowercase model name which is 'menuitem'. The default context variable name for the instance is 'object', so we can use 'object' to refer to the instance in this template (like `menuitem.meal`). -->
-    <ul>
-        <li>
+    <ul class="list-group list-group-flush">
+        <liclass="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
             <p>Meal: <strong>{{ menuitem.meal }}</strong></p>
         </li>
-        <li>
+        <liclass="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
             <p>Description: <strong>{{ menuitem.description }}</strong></p>
         </li>
-        <li>
+        <liclass="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
             <p>Price: <strong>{{ menuitem.price }}</strong></p>
         </li>
-        <li>
+        <liclass="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
             <p>Chef: <strong>{{ menuitem.chef }}</strong></p>
         </li>
-        <li>
+        <liclass="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
             <p>Added on: <strong>{{ menuitem.date_created }}</strong></p>
         </li>
     </ul>
-
-</body>
-</html>
+  
+{% endblock %}

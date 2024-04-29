@@ -8,4 +8,5 @@ urlpatterns = [
     # where '<int:pk>' denotes an integer parameter called 'pk' (primary key)
     path(route='menu_item/<int:pk>/',
          view=views.MenuItemDetail.as_view(), name='menu_item_detail'),
+    path(route='about/', view=views.AboutView.as_view(), name='about'),
 ]
