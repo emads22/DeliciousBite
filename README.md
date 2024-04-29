@@ -3,6 +3,9 @@
 ## Overview
 DeliciousBite is a comprehensive restaurant menu management system built using Django, a high-level Python web framework. It offers a seamless platform for restaurant owners and managers to showcase their menu items, provide detailed descriptions, and engage with customers effectively. With DeliciousBite, users can effortlessly browse through a variety of dishes, access nutritional information, and even generate QR codes for quick access to the restaurant's online menu. The application boasts a user-friendly interface, making it convenient for both restaurant staff and customers to interact with the menu and explore the culinary offerings. Whether you're a small cafe or a fine dining establishment, DeliciousBite provides the tools you need to elevate your online presence and streamline menu management.
 
+## QR Code
+![DeliciousBite QR Code](./QR_code/qr.png)
+
 ## Features
 - **Menu List**: Displays a list of menu items ordered by date created.
 - **Menu Item Detail**: Provides detailed information about each menu item.
