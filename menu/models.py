@@ -18,7 +18,7 @@ STATUS_CHOICES = (
 )
 
 
-class Menu(models.Model):
+class MenuItem(models.Model):
     """
     Model representing a menu item in a restaurant.
 
