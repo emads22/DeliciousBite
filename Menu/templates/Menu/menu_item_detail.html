@@ -7,5 +7,25 @@
 </head>
 <body>
     
+    <h1>Menu Item Details: </h1>
+    <!-- access the attributes of the MenuItem instance using the lowercase model name which is 'menuitem'. The default context variable name for the instance is 'object', so we can use 'object' to refer to the instance in this template (like `menuitem.meal`). -->
+    <ul>
+        <li>
+            <p>Meal: <strong>{{ menuitem.meal }}</strong></p>
+        </li>
+        <li>
+            <p>Description: <strong>{{ menuitem.description }}</strong></p>
+        </li>
+        <li>
+            <p>Price: <strong>{{ menuitem.price }}</strong></p>
+        </li>
+        <li>
+            <p>Chef: <strong>{{ menuitem.chef }}</strong></p>
+        </li>
+        <li>
+            <p>Added on: <strong>{{ menuitem.date_created }}</strong></p>
+        </li>
+    </ul>
+
 </body>
 </html>

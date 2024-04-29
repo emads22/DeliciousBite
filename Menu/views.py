@@ -1,6 +1,6 @@
 from typing import Any
 from django.shortcuts import render
-from .models import MenuItem
+from .models import MenuItem, COURSE_CHOICES
 from django.views.generic import ListView, DetailView
 
 
@@ -15,7 +15,7 @@ class MenuListView(ListView):
     """
     queryset = MenuItem.objects.order_by('-date_created')
     template_name = 'Menu/index.html'
-    context_object_name = 'menu_listing'
+    context_object_name = 'menu_list'
 
     def get_context_data(self, **kwargs):
         """
@@ -28,7 +28,7 @@ class MenuListView(ListView):
             dict: Dictionary containing the context data.
         """
         context = super().get_context_data(**kwargs)
-        context['menu_items'] = ['pizza', 'pasta']
+        context['courses'] = COURSE_CHOICES
         return context
 
 
