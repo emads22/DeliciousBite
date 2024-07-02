@@ -11,6 +11,11 @@ DeliciousBite is a comprehensive restaurant menu management system built using D
 - **Menu Item Detail**: Provides detailed information about each menu item.
 - **About Page**: Presents information about the restaurant and its philosophy.
 
+## Technologies Used
+- **Django**: A high-level Python web framework for rapid development and clean, pragmatic design.
+- **pillow**: A Python Imaging Library (PIL) fork that adds image processing capabilities.
+- **qrcode**: A library for generating QR codes.
+
 ## Setup
 1. Clone the repository.
 2. Ensure Python 3.x is installed.
