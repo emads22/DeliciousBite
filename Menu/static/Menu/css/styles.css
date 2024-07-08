@@ -1,0 +1,39 @@
+.menu-item {
+    text-decoration: none;
+    color: #ff5733; 
+}
+
+.menu-item:hover, .title{
+    color: #e04e2a; 
+}
+
+h4, .title {
+    font-weight: bolder;
+}
+
+.custom-badge {
+    background-color: #ff5733; 
+    color: #ffffff; 
+    padding: 0.5em 1em; 
+    border-radius: 50px; 
+    display: inline-block;
+    font-size: 1em; 
+}
+
+.custom-badge:hover {
+    background-color: #e04e2a; 
+    color: #ffffff; 
+}
+
+.logo {
+    margin-right: 20px; 
+    width: 60px;
+    height: 60px;
+}
+
+.icon {
+    margin-top: 5px;
+    margin-right: 10px; 
+    width: 30px;
+    height: 30px;
+}

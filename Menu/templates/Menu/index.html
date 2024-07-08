@@ -1,28 +1,30 @@
 {% extends 'Menu/base.html' %}
 
+{% load static %}
+
 {% block content %}
 
-    <h1 class="pt-5 pb-4">DeliciousBite Menu</h2>
+    <h2 class="pt-5">Menu</h2><hr>
 
     <ul class="list-group list-group-flush">
         {% for course in courses %}        
             <!-- access the second item of the course tuple '.1' (the user readable one) -->
-            <h2 class="pt-5"> {{ course.1 }} </h2>        
+            <h3 class="pt-5"> {{ course.1 }} </h3>        
             <!-- loop through the list of objects, where 'menu_list' is the context variable name specified in the context_object_name attribute of the view. Each item represents a row in the database -->
             {% for item in menu_list %}
                 {% if item.course == course.0 %}
                     {% if item.status %}
                         <li class="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
                             <!-- redirect to the'menu_item_detail' view while passing the argument pk = item.pk -->
-                            <a href="{% url 'menu_item_detail' item.pk %}"><h4>{{ item.meal }}</h4></a> 
-                            <span class="badge bg-primary rounded-pill">{{ item.price }}</span>
+                            <a class="menu-item" href="{% url 'menu_item_detail' item.pk %}"><h4>{{ item.meal }}</h4></a> 
+                            <span class="badge custom-badge rounded-pill">{{ item.price }}</span>
                         </li>                                  
                     <!-- if item.status ==0 add a <del> tag which is a line-through text-decoration -->
                     {% else %}
                         <li class="list-group-item d-flex justify-content-between align-items-center border-0 pb-0">
                             <!-- redirect to the'menu_item_detail' view while passing the argument pk = item.pk -->
-                            <a href="{% url 'menu_item_detail' item.pk %}"><h4><del>{{ item.meal }}</del></h4></a>  
-                            <span class="badge bg-primary rounded-pill">{{ item.price }}</span>
+                            <a class="menu-item" href="{% url 'menu_item_detail' item.pk %}"><h4><del>{{ item.meal }}</del></h4></a>  
+                            <span class="badge custom-badge rounded-pill">{{ item.price }}</span>
                         </li>                   
                     {% endif %}
                     <li class="list-group-item pt-0">
